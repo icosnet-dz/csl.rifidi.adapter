@@ -104,7 +104,7 @@ public class CS203ReaderSession extends AbstractServerSocketSensorSession
 		this.idPort = serverSocketPort;
 		this.readerID = sensor.getID();
 		this.notifierService = ns;
-		this.tagHandler = new CS203ReaderSessionTagHandler(ID);
+		this.tagHandler = new CS203ReaderSessionTagHandler(this.readerID);
 		this.parsingFactory = new CS203MessageParsingStrategyFactory();
 		this.Connector = new CS203Connector(this.getSensor().getName(),
 				this.ipAdresse);
